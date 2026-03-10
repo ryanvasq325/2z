@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empresa</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>Cadastro de Empresa</h1>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputNomeFantasia" class="form-label">Nome Fantasia</label>
+        <input type="text" class="form-control" id="inputNomeFantasia" />
+      </div>
+      <div class="col-md-6">
+        <label for="inputRazaoSocial" class="form-label">Razão Social</label>
+        <input type="text" class="form-control" id="inputRazaoSocial" />
+      </div>
+      <div class="col-12">
+        <label for="inputEndereco" class="form-label">Endereço</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputEndereco"
+          placeholder="Rua Aranha, 123"
+        />
+      </div>
+      <div class="col-12">
+        <button type="button" class="btn btn-primary">Salvar</button>
+        <button type="button" id="fechar" class="btn btn-secondary" onclick="fecharJanela()">Fechar</button>
+      </div>
+    </form>
+  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="./empresa.js"></script>
+</html>
