@@ -1,11 +1,11 @@
 // index.js
-const registerCliente = document.getElementById("cadastroCliente");
-const registerUsuario = document.getElementById("cadastroUsuario");
-const registerFornecedor = document.getElementById("cadastroFornecedor");
-const registerEmpresa = document.getElementById("cadastroEmpresa");
+const cadastroCliente = document.getElementById("cadastroCliente");
+const cadastroUsuario = document.getElementById("cadastroUsuario");
+const cadastroFornecedor = document.getElementById("cadastroFornecedor");
+const cadastroEmpresa = document.getElementById("cadastroEmpresa");
 
-if (registerCliente && registerUsuario && registerFornecedor && registerEmpresa) {
-    registerCliente.addEventListener("click", async (event) => {
+if (cadastroCliente && cadastroUsuario && cadastroFornecedor && cadastroEmpresa) {
+    cadastroCliente.addEventListener("click", async (event) => {
         event.preventDefault();
 
         try {
@@ -14,7 +14,7 @@ if (registerCliente && registerUsuario && registerFornecedor && registerEmpresa)
             console.error("Erro ao abrir cliente.html:", error);
         }
     });
-    registerUsuario.addEventListener("click", async (event) => {
+    cadastroUsuario.addEventListener("click", async (event) => {
         event.preventDefault();
 
         try {
@@ -23,7 +23,7 @@ if (registerCliente && registerUsuario && registerFornecedor && registerEmpresa)
             console.error("Erro ao abrir usuario.html:", error);
         }
     });
-    registerFornecedor.addEventListener("click", async (event) => {
+    cadastroFornecedor.addEventListener("click", async (event) => {
         event.preventDefault();
 
         try {
@@ -32,22 +32,13 @@ if (registerCliente && registerUsuario && registerFornecedor && registerEmpresa)
             console.error("Erro ao abrir fornecedor.html:", error);
         }
     });
-    registerEmpresa.addEventListener("click", async (event) => {
+    cadastroEmpresa.addEventListener("click", async (event) => {
         event.preventDefault();
 
         try {
             await window.electronAPI.openPage("empresa.html");
         } catch (error) {
             console.error("Erro ao abrir empresa.html:", error);
-        }
-    });
-    Voltarinicio.addEventListener("click", async (event) => {
-        event.preventDefault();
-
-        try {
-            await window.electronAPI.openPage("index.html");
-        } catch (error) {
-            console.error("Erro ao abrir index.html:", error);
         }
     });
 }
