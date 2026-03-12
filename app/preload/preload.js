@@ -1,5 +1,6 @@
-const { contextBridge, ipcRenderer } = require("electron");
+import { contextBridge, ipcRenderer } from 'electron';
 
-contextBridge.exposeInMainWorld("openPage", 
-    (pageName) => ipcRenderer.invoke("window:open-page", pageName)
-);
+contextBridge.exposeInMainWorld('electronAPI', {
+    openPage: (pageName) => ipcRenderer.invoke('window:open-page', pageName),
+    getDatabaseTime: () => ipcRenderer.invoke('database:get-time')
+});
