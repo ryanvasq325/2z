@@ -1,7 +1,7 @@
 {
     "name": "2z",
     "version": "1.0.0",
-    "main": "main.js",
+    "main": "/app/renderer/main/index.js",
     "private": true,
     "scripts": {
         "start": "electron ."
@@ -11,9 +11,6 @@
         "electron": "^40.7.0"
     },
     "dependencies": {
-        "@prisma/adapter-pg": "^7.4.2",
-        "@prisma/client": "^7.4.2",
-        "pg": "^8.20.0",
-        "prisma": "^7.4.2"
+        "pg": "^8.20.0"
     }
 }
